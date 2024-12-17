@@ -1,92 +1,54 @@
-# ChainGenie-Chainlit-Chatbot-with-Autogen
-🤖 ChainGenie: Chainlit Chatbot with Autogen
-ChainGenie is an AI-powered chatbot built using Chainlit and Autogen. It offers advanced conversational capabilities, data visualization, and seamless integration with Computer Vision and GPT models. Designed for backend applications, ChainGenie can analyze data, visualize insights, and provide intelligent responses through a RESTful API.
+---
+title: Autogen Template
+emoji: 🔥
+colorFrom: indigo
+colorTo: green
+sdk: docker
+pinned: false
+license: apache-2.0
+---
 
-📌 Features
-Conversational AI: Engages users with intelligent and context-aware conversations.
-File Upload Support: Users can upload CSV and Excel files for data visualization.
-Data Visualization: Automatically generates graphs and visual insights from uploaded data.
-Computer Vision Integration: Analyzes images and extracts text using OCR.
-GPT Integration: Provides contextual insights using OpenAI's GPT model.
-RESTful API: Built with Flask and deployed using Azure Functions.
-.NET Integration: Easily consumable API endpoints for .NET applications.
-🛠️ Technology Stack
-Component	Technologies
-Frontend	Chainlit
-Backend	Python, Flask, Azure Functions
-AI Models	OpenAI GPT, Autogen
-Computer Vision	OpenCV, EasyOCR
-Data Visualization	Matplotlib, Pandas
-Deployment	Azure, Docker (optional)
-.NET Integration	.NET Core, HttpClient
-🚀 How It Works
-Chatbot Interaction: Users interact with the chatbot via Chainlit.
-File Upload: Upload CSV/Excel files directly through the chatbot interface.
-Visualization: Upon request, ChainGenie generates visualizations from the uploaded data.
-Image Analysis: Upload images to extract text and pass insights to GPT for analysis.
-API Integration: Expose Flask API endpoints for .NET consumption.
-📂 Project Structure
-plaintext
-Copy code
-.
-├── agents/
-│   ├── chainlit_agents.py      # Custom agents for visualization and processing
-│
-├── app.py                      # Main Chainlit chatbot and API entry point
-├── requirements.txt            # Python dependencies
-├── README.md                   # Project documentation
-└── .env                        # Environment variables (API keys, configurations)
-📝 Setup Instructions
-1. Clone the Repository
-bash
-Copy code
-git clone https://github.com/your-username/ChainGenie.git
-cd ChainGenie
-2. Install Dependencies
-bash
-Copy code
+# Installation and Setup
+You will need Python, Conda, Docker (Optional for code-execution), Git, and a text editor installed.
+
+First install python=3.11 and other 3rd party dependencies. If you have conda installed, you can run the following commands:
+
+```shell
+conda create --name demo python=3.11 -y
+conda activate demo
+
 pip install -r requirements.txt
-3. Configure Environment Variables
-Create a .env file in the root directory:
+```
 
-plaintext
-Copy code
-API_KEY=your_openai_api_key
-AZURE_API_KEY=your_azure_api_key
-AZURE_API_BASE_URL=your_azure_base_url
-MODEL_NAME=gpt-4o-aus-team01
-4. Run the Application
-bash
-Copy code
+If you do not have conda installed but have virtualenv installed, you can run the following commands:
+```shell
+pip install virtualenv
+virtualenv demo -p python3.
+
+# on windows
+demo\Scripts\activate
+# on mac/linux
+source demo/bin/activate
+
+pip install -r requirements.txt
+```
+
+# Configure the environment variables
+Notion webpage for instructions:
+https://lopsided-zipper-e29.notion.site/ReviewGPT-57444b82eac643539e393b8fc34d2f38?pvs=4
+
+# Usage
+Run the following command to start the chat interface. Change the logo files on the /public folder to change the logo.
+
+```shell
 chainlit run app.py
-Access the app at http://localhost:8000.
+```
 
-📊 Example API Request
-Using cURL to send a file upload request:
+# File Structure
 
-bash
-Copy code
-curl -X POST "http://localhost:8000/upload" -H "Content-Type: multipart/form-data" -F "file=@data.xlsx"
-🤖 Usage Scenarios
-Data Analysis: Upload datasets and generate visual insights.
-Document Processing: Extract and analyze text from images or scanned documents.
-Intelligent Chatbot: Engage in conversations for AI-driven assistance.
-.NET Integration: Seamlessly integrate with .NET projects using RESTful APIs.
-🧪 Testing
-Run unit tests using unittest:
+This is an example of using the chainlit chat interface with multi-agent conversation between agents to complete a tasks.
 
-bash
-Copy code
-python -m unittest discover tests
-📄 License
-This project is licensed under the MIT License.
+The tool was developed to grab SAP data online and then process it to easily digestible human language.      
+ 
+`app.py` - Starts the chat interface.
 
-👨‍💻 Author
-Developed by [Your Name]
-Role: Software Development Engineer (SDE)
-Expertise: AI, Python Backend, NLP, and API Development
-
-🌐 Connect
-LinkedIn: Your LinkedIn Profile
-GitHub: Your GitHub Profile
-This README provides all the essential information, making it easy for users and collaborators to understand and utilize the project.
