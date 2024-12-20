@@ -13,7 +13,7 @@ llm_config = {
     "api_type": "azure",
     "api_key": os.getenv("AZURE_API_KEY"),
     "base_url": os.getenv("AZURE_API_BASE_URL"),
-    "api_version": "2024-08-01-preview",  # model name
+ # model name
 }
 # -------------------- Initialize Agents ----------------------------- #
 @cl.on_chat_start
