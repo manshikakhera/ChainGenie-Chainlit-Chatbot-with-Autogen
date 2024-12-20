@@ -1,12 +1,4 @@
-# import openai
- 
 
-# openai.api_type = 'azure'
-# openai.api_key = '32U5uHluuQeWiGio3MMYzqHqwLStsCOY3UPMlxCiUJs5R3Sf9bu4JQQJ99AKACHYHv6XJ3w3AAABACOGvfi2'  
-# openai.base_url = 'https://gpt-4o-deploy1.openai.azure.com/' 
-# openai.api_version = '2024-08-01-preview'  # Verify the version
- 
-# # Replace 'gpt-4o-team1' with your deployment name
 # try:
 #     response = openai.ChatCompletion.create(
 #         engine="gpt-4o-team1",  # Your Azure deployment name
